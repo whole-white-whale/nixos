@@ -10,6 +10,10 @@
     systemd-boot.enable = true;
   };
 
+  environment.systemPackages = with pkgs; [
+    git
+  ];
+
   i18n.defaultLocale = "en_US.UTF-8";
 
   networking = {
