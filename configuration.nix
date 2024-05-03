@@ -30,6 +30,11 @@
     displayManager.lightdm.enable = true;
     enable = true;
     windowManager.bspwm.enable = true;
+
+    xkb = {
+      layout = "us,ru";
+      options = "grp:alt_shift_toggle";
+    };
   };
 
   system.stateVersion = "23.11";
