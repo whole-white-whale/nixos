@@ -26,14 +26,22 @@
     "nix-command"
   ];
 
-  services.xserver = {
-    displayManager.lightdm.enable = true;
-    enable = true;
-    windowManager.bspwm.enable = true;
+  services = {
+    pipewire = {
+      audio.enable = true;
+      enable = true;
+      pulse.enable = true;
+    };
 
-    xkb = {
-      layout = "us,ru";
-      options = "grp:alt_shift_toggle";
+    xserver = {
+      displayManager.lightdm.enable = true;
+      enable = true;
+      windowManager.bspwm.enable = true;
+
+      xkb = {
+        layout = "us,ru";
+        options = "grp:alt_shift_toggle";
+      };
     };
   };
 
