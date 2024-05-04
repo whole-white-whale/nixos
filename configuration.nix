@@ -14,6 +14,13 @@
     git
   ];
 
+  fonts.packages = with pkgs; [
+    nerdfonts
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+  ];
+
   i18n.defaultLocale = "en_US.UTF-8";
 
   networking = {
