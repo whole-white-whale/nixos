@@ -34,6 +34,8 @@
   ];
 
   services = {
+    gvfs.enable = true;
+
     pipewire = {
       enable = true;
 
