@@ -35,14 +35,19 @@
 
   services = {
     pipewire = {
-      audio.enable = true;
       enable = true;
+
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
+
       pulse.enable = true;
     };
 
     xserver = {
-      displayManager.lightdm.enable = true;
       enable = true;
+      displayManager.lightdm.enable = true;
       windowManager.bspwm.enable = true;
 
       xkb = {
