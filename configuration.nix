@@ -51,7 +51,37 @@
 
     xserver = {
       enable = true;
-      displayManager.lightdm.enable = true;
+
+      displayManager.lightdm = {
+        enable = true;
+
+        greeters.gtk = {
+          clock-format = "%a %b %d %H:%M";
+
+          extraConfig = ''
+            font-name = Iosevka NFM 12
+          '';
+
+          iconTheme = {
+            name = "Papirus-Dark";
+            package = pkgs.papirus-icon-theme;
+          };
+
+          indicators = [
+            "~session"
+            "~spacer"
+            "~clock"
+            "~spacer"
+            "~power"
+          ];
+
+          theme = {
+            name = "Arc-Dark";
+            package = pkgs.arc-theme;
+          };
+        };
+      };
+
       windowManager.bspwm.enable = true;
 
       xkb = {
